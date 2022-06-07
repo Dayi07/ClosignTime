@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(InicioController::class)->group(function(){
     Route::get('Inicio_sesion', 'Inicio');
-    Route::get('Registrarse', 'Registrarse');
+    Route::get('Registrarse', 'Registrarse')->name('registrarse');
 });
