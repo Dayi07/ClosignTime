@@ -1,0 +1,51 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    background: white;
+    margin: 0%;
+    padding: 0%;
+
+    /*centrar el contenido*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: auto;
+    height: auto;
+    padding: 40px;
+    background: #d9f8f3;
+}
+
+select,
+.form-box button[type="submit"],
+.form-box input[type="file"],
+.form-box input[type="datetime-local"]{
+    border: 0;
+    background: white;
+    margin: 20px auto;
+    padding: 14px 10px;
+    color: black;
+
+    border: 2px solid #a8e5ec;/*botones*/
+    border-radius: 20px;
+    width: 400px;
+    outline: none;
+    transition: 0,25px;
+
+}
+
+.form-box button[type="submit"],
+.form-box button a{
+    width: 200px;
+    background: white;
+
+    list-style: none; /*letra del a*/
+    text-decoration: none;
+    color: black;
+}

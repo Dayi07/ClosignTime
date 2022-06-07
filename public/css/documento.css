@@ -1,0 +1,234 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    background: white;
+    margin: 0%;
+    padding: 5%; /************************************************/
+
+    /*centrar el contenido*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ESTILOS DEL FORMULARIO*/
+.form-box {
+    width: 80%;
+    height: auto;
+    padding: 40px;
+    background: #d9f8f3;
+}
+
+.form-box button[type="submit"]{
+    border: 0;
+    background: white;
+    margin: 20px auto;
+    padding: 14px 10px;
+
+    border: 2px solid #a8e5ec;/*botones*/
+    border-radius: 20px;
+    width: 400px;
+    outline: none;
+    transition: 0,25px;
+}
+
+.form-box a{
+    list-style: none; /*letra del a*/
+    text-decoration: none;
+    color: black;
+}
+
+.form-box button:hover,
+.form-box a:hover {
+    background: white;
+    border-color: #96dde5;
+    font-size: 15px;
+}
+
+
+/*ESTILO DE LOS CAMPOS*/
+
+#Campo{
+    padding: 40px 70px ;
+    height: auto;
+    background-color: white;
+    border: 2px solid #a8e5ec;
+  }
+
+#contenido{
+      float:left;
+  }
+
+#contenido h1 a:hover{
+      font-size: 30px;
+  }
+
+#estado{
+      clear:both;
+      font-size: 20px;
+  }
+
+#botones .modificar,
+#botones .eliminar{
+      float:right;
+      font-size: 15px;
+      background: white;
+      border: 2px solid #a8e5ec;/*botones*/
+      border-radius: 20px;
+      width: 250px;
+      height: 50px;
+      outline: none;
+  }
+
+#botones .modificar:hover,
+#botones .eliminar:hover{
+      background: white;
+      border-color: #96dde5;
+      font-size: 16px;
+
+  }
+
+
+
+  /*ESTILOS DEL MENU*/
+  .header {
+      width: 100%;
+      height: 75px;
+      background: #d9f8f3;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+  }
+
+  .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+  }
+
+  .logo {
+      float: left;
+      line-height: 75px;
+  }
+
+  .logo h1 {
+      font-weight: 400;
+      font-size: 24px;
+      cursor: default;
+  }
+
+  .menu {
+      float: right;
+      line-height: 75px;
+  }
+
+  .menu a {
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      padding: 10px 15px;
+      line-height: normal;
+      font-size: 14px;
+      transition: all 500ms ease;
+  }
+
+  .menu a:hover{
+      color: #96dde5;
+  }
+
+
+  /*Estilos para el boton del menu*/
+  #btn-menu{
+      display: none;
+  }
+
+  .boton {
+      float: right;
+      display: none;
+  }
+
+  .boton label{
+      color: black;
+      background: #a8e5ec;
+      border-radius: 3px;
+      padding: 5px;
+      font-size: 14px;
+      cursor: pointer;
+  }
+
+
+  /*Estilo del menu para dispositivos */
+  @media only screen and (min-width:320px) and (max-width:768px){
+
+      /*MENU*/
+      .header{
+          height: 60px;
+      }
+      .logo, .boton{
+          line-height: 60px;
+      }
+
+      .logo h1 {
+          font-size: 18px;
+      }
+
+      .menu {
+          position: absolute;
+          background: #a8e5ec;
+          width: 100%;
+          height: 100vh;
+          top: 60px;
+          left: 0;
+          transition: all 500ms ease;
+          transform: translateX(-100%);
+      }
+
+      #btn-menu:checked ~ .menu{
+          transform: translateX(0%);
+      }
+
+      .menu a{
+          display: block;
+          margin-top: 10px;
+      }
+
+      .boton {
+          display: block;
+      }
+
+      /*FORM*/
+      .form-box{
+          width: 350px;
+          text-align: center;
+      }
+
+      select,
+      .form-box input[type="file"],
+      .form-box input[type="datetime-local"]{
+          margin: 20px auto;
+          padding: 14px 10px;
+          width: 300px;
+      }
+
+      .form-box button[type="submit"]{
+          width: 250px;
+      }
+
+      #contenido h1{
+          font-size: 20px;
+      }
+
+      #contenido h1 a:hover{
+        font-size: 15px;
+    }
+
+    #botones .modificar,
+    #botones .eliminar{
+        position: center;
+    }
+  }
