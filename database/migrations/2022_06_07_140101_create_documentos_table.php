@@ -14,9 +14,14 @@ class CreateDocumentosTable extends Migration
     public function up()
     {
         Schema::create('documentos', function (Blueprint $table) {
-            $table->id();
+            $table->id('Codigo_documento')->autoIncrement(); //AUTO-INCREMENTO
+            $table->unsignedBigInteger('Usuario_id');
+            $table->dateTime('Fecha_Hora_entrega');
+            $table->string('Tipo_documento');
+            $table->string('Archivo');
+            $table->string('Estado');
+            $table->foreign('Usuario_id')->references('Id_usuario')->on('usuario');
             $table->timestamps();
-            
         });
     }
 

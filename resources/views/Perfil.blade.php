@@ -35,8 +35,8 @@ $fila = mysqli_fetch_array($res);*/
         <input type="checkbox" id="btn-menu">
 
         <nav class="menu" >
-            <a href="Perfil.php">Perfil</a>
-            <a href="Documentos.php">Documentos</a>
+            <a href="{{ route('Perfil') }}">Perfil</a>
+            <a href="{{ route('Documentos') }}">Documentos</a>
             <a href="">Tiempo</a>
         </nav>
 </header>

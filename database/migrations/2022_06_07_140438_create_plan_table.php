@@ -14,7 +14,13 @@ class CreatePlanTable extends Migration
     public function up()
     {
         Schema::create('plan', function (Blueprint $table) {
-            $table->id();
+            $table->id('Id_plan');
+            $table->unsignedBigInteger('Usuario_id');
+            $table->string('Nombre_plan');
+            $table->integer('Costo_plan');
+            $table->dateTime('Tiempo_limite');
+            $table->boolean('Estado_plan');
+            $table->foreign('Usuario_id')->references('Id_usuario')->on('usuario');
             $table->timestamps();
         });
     }

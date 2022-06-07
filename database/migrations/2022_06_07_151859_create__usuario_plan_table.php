@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCronometroTable extends Migration
+class CreateUsuarioPlanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateCronometroTable extends Migration
      */
     public function up()
     {
-        Schema::create('cronometro', function (Blueprint $table) {
-            $table->id('Id_cronometro');
-            $table->unsignedBigInteger('Usuario_id'); //FORANEA DE USUARIO
-            $table->time('Cantidad_tiempo');
-            $table->time('Tiempo_personalizado');
+        Schema::create('usuario_plan', function (Blueprint $table) {
+            $table->unsignedBigInteger('Usuario_id');
             $table->foreign('Usuario_id')->references('Id_usuario')->on('usuario');
+
+            $table->unsignedBigInteger('Plan_id');
+            $table->foreign('Plan_id')->references('Id_plan')->on('plan');
+            $table->string('Entidad_pago');
+
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateCronometroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cronometro');
+        Schema::dropIfExists('_usuario_plan');
     }
 }

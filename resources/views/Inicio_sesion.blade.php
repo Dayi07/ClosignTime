@@ -16,7 +16,7 @@
         <input type="password" placeholder="Ingrese su contraseña" name="Contrasena">
         <button type="submit" name="ingresar"> Ingresar </button>
 
-        <p>¿No tienes cuenta? <a href=" ">Registrate aquí</a></p>
+        <p>¿No tienes cuenta? <a href="{{ route('registrarse') }}">Registrate aquí</a></p>
 
     </form>
 
