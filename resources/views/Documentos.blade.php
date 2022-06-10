@@ -39,11 +39,14 @@
 
 
         <div id="contenido">
+            <center>
             <h1>
                 <p>documento.docx</p>
             </h1>
+            </center>
             <p>Fecha Entrega: 9/06/2022<?php #echo $fila['Fecha_Hora_entrega']; ?></p>
             <p>Tipo: Word<?php #echo $fila['Tipo_documento']; ?></p>
+            <p>Descripcion: Se entrega en formato PDF por la plataforma Territorium</p>
         </div>
 
         <div id="botones">
