@@ -1,14 +1,3 @@
-<?php
-/*include ("Database.php");
-$usuarios= new Database();
-
-session_start();
-$Correo = $_SESSION['CorreoUsu'];
-
-$res = $usuarios->datosUsuario($Correo);
-$fila = mysqli_fetch_array($res);*/
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,31 +24,26 @@ $fila = mysqli_fetch_array($res);*/
         <input type="checkbox" id="btn-menu">
 
         <nav class="menu" >
-            <a href="{{ route('Perfil') }}">Perfil</a>
-            <a href="{{ route('Documentos') }}">Documentos</a>
+            <a href="{{ route('perfil') }}">Perfil</a>
+            <a href="{{ route('documento') }}">Documentos</a>
             <a href="">Tiempo</a>
         </nav>
 </header>
-
+ 
 <form action="" method="POST" class="form-box">
 
     <img src="img/logo.jpg" class="foto">
-
+<br><br>
     <h1>
-        <?php
-            #echo $fila['Nombre_usuario'];
-        ?>
+        MARILYN DAYANA LONDOÑO HOYOS
     </h1>
 
     <h3>
-        <?php
-            #echo $fila['Edad_usuario'];
-        ?>
-
+        17 AÑOS
     </h3>
 
     <div class="btn-perfil">
-        <button type="submit" name="CerrarSes" id="boton_perfil"><a href="login.php" onclick ="<?php #session_destroy(); ?>">  Cerrar Sesion </a></button>
+        <button type="submit" name="CerrarSes" id="boton_perfil"><a href="{{route('inicio')}}">  Cerrar Sesion </a></button>
         <button type="submit" name="CambiarCont" id="boton_perfil"><a  href="Cambiar_contrasena.php"> Cambia Contraseña </a></button>
     </div>
 </form>

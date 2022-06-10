@@ -15,7 +15,7 @@
     
     <div action="" class="form-box" method="POST">
         
-        <img src="img/logo.jpg" class="logo">
+        <img src="{{asset('img/logo.jpg')}}" class="logo">
         <input type="text" placeholder="Ingrese su correo" name="Correo">        
         <a href="" type="text"> Recuperar </a>
 

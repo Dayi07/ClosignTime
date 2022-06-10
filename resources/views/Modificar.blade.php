@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos</title>
-    <link rel="stylesheet" href="{{asset('css/agregar.css')}}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/agregar.css')}}">
 </head>
 <body>
 
-<form action="Agregar_documento.php" method="POST" class="form-box" enctype="multipart/form-data">
+<form action="" method="POST" class="form-box" enctype="multipart/form-data">
 
+    <center><h2>Modificar Archivo</h2></center>
+    
     Tipo de Archivo: <select name="TipoArchivo">
                         <option>Word</option>   <option>PDF</option>   <option>Excel</option>   <option>PowerPoint</option>   <option>JPG</option>
                     </select><br>
@@ -24,11 +25,12 @@
                     </select><br>
 
    <center>
-       <button type="submit" name="AgregarDoc"> Agregar Documento </button>
-       <button type="submit" name="Cancelar"><a  href="{{route('documento')}}"> Cancelar </a></button>
+       <button type="submit" name="ModificarDoc"> Modificar </button>
+       <button type="submit" name="Cancelar"> <a  href="{{route('documento')}}"> Cancelar </a></button>
     </center>
 
-</form>
 
+</form>
 </body>
 </html>
+

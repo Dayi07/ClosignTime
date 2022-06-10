@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\DatabaseController;
+use App\Http\Controllers\DocumentoController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ModulosController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,30 +14,27 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
 
-//----------------- https://norvicsoftware.com/vistas-y-rutas-en-laravel-8/
-//----------------- https://www.oulub.com/Laravel/migrations
-//----------------- https://runebook.dev/es/docs/laravel/docs/8.x/routing
+/*Route::get('/', InicioController::class);
+Route::resource('Inicio', InicioController::class); 
+Route::resource('Inicio', InicioController::class); 
 
-
-Route::controller(InicioController::class)->group(function(){
-    Route::get('inicio_sesion', 'Inicio');
-    Route::get('registrarse', 'Registrarse')->name('registrarse');
-});
-
-Route::controller(ModulosController::class)->group(function(){
-    Route::get('perfil', 'Perfil');
-    Route::get('documento', 'Documentos');
-});
-
-
-
-/*
 Route::get('/', function() {
     return view('Inicio_sesion');
+});*/
+Route::controller(ModulosController::class)->group(function(){
+    Route::get('perfil', 'Perfil')->name('perfil');
+    Route::get('documentos', 'Documentos')->name('documento');
 });
 
-Route::get('/', function() {
-    return view('Registrarse')->name('registrarse');
-});*/
+Route::controller(InicioController::class)->group(function(){
+    Route::get('inicio_sesion', 'Inicio')->name('inicio');
+    Route::get('registrarse', 'Registrarse')->name('registro');
+});
+
+Route::controller(DocumentoController::class)->group(function(){
+    Route::get('agregar', 'Nuevo')->name('agregar');
+    Route::get('modificar', 'ModificarView')->name('modificar');
+});
+

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ModulosController extends DatabaseController
 {
+    public function __invoke()
+    {
+    }
+    
     public function Perfil(){
         return view('Perfil');
     }

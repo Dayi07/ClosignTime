@@ -11,14 +11,14 @@
 
     <form action="Inicio_sesion.php" method="POST" class="form-box">
 
-        <img src="img/logo.jpg" class="logo">
+        <img src="{{asset('img/logo.jpg')}}" class="logo">
         <input type="text" placeholder="Ingrese su correo" name="Correo">
         <input type="password" placeholder="Ingrese su contraseña" name="Contrasena">
         <button type="submit" name="ingresar"> Ingresar </button>
 
-        <p>¿No tienes cuenta? <a href="{{ route('registrarse') }}">Registrate aquí</a></p>
+        <p>¿No tienes cuenta? <a href="{{route('registro')}}">Registrate aquí</a></p>
 
-    </form>
+    </form> 
 
 </body>
 </html>
