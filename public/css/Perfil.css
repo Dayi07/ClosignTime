@@ -17,19 +17,21 @@ body {
 
 /*ESTILOS DEL FORMULARIO*/
 .form-box {
-    width: 60%;
+    width: 80%;
     height: auto;
     padding: 40px;
     background: #d9f8f3;
     text-align: center;
+    border-radius: 5px;
 }
 
-.form-box button[type="submit"]{
+.form-box button[type="button"]{
     text-align: center;
     border: 0;
     background: white;
     margin: 4px;
-    display:block;
+    display: flexbox;
+    font-size: 15px;
 
     padding: 14px 10px;
     color: black;
@@ -47,19 +49,14 @@ body {
     color: black;
 }
 
-#boton_perfil{
-    background-color: white;
-    border:  #96dde5 2px solid;
-    display: contents;
-}
 
 .foto {
     width: 200px;
     position: absolute;
     border-radius: 50%;
     margin-right: 50%;
-    margin-left: -8%;
-    margin-top: -9%;
+    margin-left: -5%;
+    margin-top: -10%;
 }
 
 
@@ -107,7 +104,7 @@ body {
 }
 
 .menu a:hover{
-    color: #96dde5;
+    color: white;
 }
 
 /*Estilos para el boton del menu*/
@@ -145,18 +142,22 @@ body {
     }
 
     .logo h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .menu {
         position: absolute;
         background: #a8e5ec;
-        width: 100%;
+        width: 80%;
         height: 100vh;
         top: 60px;
         left: 0;
         transition: all 500ms ease;
         transform: translateX(-100%);
+    }
+
+    .menu a{
+        font-size: 20px;
     }
 
     #btn-menu:checked ~ .menu{
@@ -178,15 +179,21 @@ body {
         text-align: center;
     }
 
-    select,
-    .form-box input[type="file"],
-    .form-box input[type="datetime-local"]{
-        margin: 20px auto;
-        padding: 14px 10px;
-        width: 300px;
+    .form-box button[type="button"]{
+        width: 250px;
     }
 
-    .form-box button[type="submit"]{
-        width: 250px;
+    .form-box button[type="button"]:hover{
+        width: 260px;
+        border-color: #8dd5dd;
+    }
+
+    .foto {
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+        margin-right: 50%;
+        margin-left: -20%;
+        margin-top: -28%;
     }
 }

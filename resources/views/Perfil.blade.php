@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="{{asset('css/Perfil.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/perfil.css')}}" type="text/css">
 
 </head>
 <body>
@@ -43,8 +43,8 @@
     </h3>
 
     <div class="btn-perfil">
-        <button type="submit" name="CerrarSes" id="boton_perfil"><a href="{{route('inicio')}}">  Cerrar Sesion </a></button>
-        <button type="submit" name="CambiarCont" id="boton_perfil"><a  href="Cambiar_contrasena.php"> Cambia Contraseña </a></button>
+        <button type="button" name="CerrarSes" id="boton_perfil"><a href="{{route('inicio')}}">  Cerrar Sesion </a></button>
+        <button type="button" name="CambiarCont" id="boton_perfil"><a  href="Cambiar_contrasena.php"> Cambia Contraseña </a></button>
     </div>
 </form>
 

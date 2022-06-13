@@ -17,7 +17,7 @@ class CreateCronometroTable extends Migration
             $table->id('Id_cronometro');
             $table->unsignedBigInteger('Usuario_id'); //FORANEA DE USUARIO
             $table->time('Cantidad_tiempo');
-            $table->time('Tiempo_personalizado');
+            $table->time('Tiempo_personalizado')->nullable();
             $table->foreign('Usuario_id')->references('Id_usuario')->on('usuario');
             $table->timestamps();
         });

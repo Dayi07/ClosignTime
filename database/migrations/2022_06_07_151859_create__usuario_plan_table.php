@@ -16,11 +16,9 @@ class CreateUsuarioPlanTable extends Migration
         Schema::create('usuario_plan', function (Blueprint $table) {
             $table->unsignedBigInteger('Usuario_id');
             $table->foreign('Usuario_id')->references('Id_usuario')->on('usuario');
-
             $table->unsignedBigInteger('Plan_id');
             $table->foreign('Plan_id')->references('Id_plan')->on('plan');
             $table->string('Entidad_pago');
-
             $table->timestamps();
         });
     }

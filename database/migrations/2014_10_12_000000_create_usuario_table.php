@@ -19,7 +19,7 @@ class CreateUsuarioTable extends Migration
             $table->string('Correo_usuario')->unique(); //PARA QUE SEA UN VALOR UNICO
             $table->integer('Edad_usuario');
             $table->string('Contraseña_usuario');
-            $table->string('Foto_perfil');
+            $table->string('Foto_perfil')->nullable();
             $table->timestamps();
         });
     }
