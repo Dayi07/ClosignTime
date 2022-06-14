@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Usuario;
 
 class InicioController extends DatabaseController
 {
 
-    public function __invoke()
-    {
+    protected $usuario;
+
+    public function __construct(Usuario $usuario){
+        $this->usuario = $usuario;
+    }
+
+
+    public function index(){
+        $inicio = $this->usuario->obtenerUsuario();
+        return view('Inicio_sesion.lista', ['usuario' => $inicio]);
     }
 
     public function Inicio(){
@@ -18,7 +27,7 @@ class InicioController extends DatabaseController
     public function Registrarse(){
         return view('Registrarse');
     }
- 
+
     //Funcion para validar el inicio de sesion
     public function inicioUsuario($Correo, $Contrasena){
         $this->correo = $Correo;
@@ -27,7 +36,9 @@ class InicioController extends DatabaseController
         $filas=mysqli_num_rows($res);
         return $filas;
     }
-    
-    
+
+    public function prueba(){
+        return true;
+    }
 
 }

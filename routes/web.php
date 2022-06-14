@@ -14,15 +14,8 @@ use App\Http\Controllers\ModulosController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/ 
+*/
 
-/*Route::get('/', InicioController::class);
-Route::resource('Inicio', InicioController::class); 
-Route::resource('Inicio', InicioController::class); 
-
-Route::get('/', function() {
-    return view('Inicio_sesion');
-});*/
 Route::controller(ModulosController::class)->group(function(){
     Route::get('perfil', 'Perfil')->name('perfil');
     Route::get('documentos', 'Documentos')->name('documento');

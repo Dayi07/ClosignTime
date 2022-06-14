@@ -8,12 +8,12 @@ class DatabaseController {
     protected $con;
     protected $dbhost="localhost";
     protected $dbuser="root";
-    protected $dbpass="";
+    protected $dbpass="Sena2020*";
     protected $dbname="closingtime";
     protected $correo="";
 
 
- 
+
     //Contructor
     function __construct(){
         $this->connect_db();
@@ -49,7 +49,7 @@ class DatabaseController {
         }
     }
 
-    
+
 
     //Funcion de validacion para los campos del registro
     public function confirmarRegistro($Nombre,$Edad, $Correo, $Contrasena){

@@ -7,8 +7,6 @@
     <title>Documentos</title>
     <link rel="stylesheet" href="{{asset('css/documento.css')}}" type="text/css">
 
-    
-
 </head>
 <body>
 <header class="header">
@@ -37,32 +35,33 @@
 
     <div id="Campo">
 
-
         <div id="contenido">
-            <center>
+
             <h1>
                 <p>documento.docx</p>
             </h1>
-            </center>
-            <p>Fecha Entrega: 9/06/2022<?php #echo $fila['Fecha_Hora_entrega']; ?></p>
-            <p>Tipo: Word<?php #echo $fila['Tipo_documento']; ?></p>
+
+            <p>Fecha Entrega: 9/06/2022</p>
+            <p>Tipo: Word</p>
             <p>Descripcion: Se entrega en formato PDF por la plataforma Territorium</p>
         </div>
 
         <div id="botones">
-            <button type="button" class="modificar"><a  href="{{route('modificar')}}"> Modificar </a></button><br><br><br>
+            <br><br>
+            <button type="button" class="modificar"><a  href="{{route('modificar')}}"> Modificar </a></button><br><br><br><br>
             <button type="button" class="eliminar"><a  href=""> Eliminar </a></button>
         </div>
 
         <center>
             <div id="estado">
-                <p><b>Terminado<?php #echo $fila['Estado_documento']; ?></b></p>
+                <p><b>Terminado</b></p>
             </div>
         </center>
 
 
     </div>
     <br><br>
+
 
 </form>
 
