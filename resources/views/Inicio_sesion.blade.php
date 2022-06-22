@@ -18,20 +18,12 @@
 
         <p>¿No tienes cuenta? <a href="{{route('registro')}}">Registrate aquí</a></p>
 
-        
-
+        @foreach ($usuarios as $usuario)
+        <p>{{$usuario->Nombre_usuario}}  {{$usuario->Edad_usuario}}   {{$usuario->Correo_usuario}}   {{$usuario->Contraseña_usuario}}</p>
+        @endforeach
 
     </form>
 
 </body>
 </html>
 
-
-<?php
-
-$res = (array('route'=>'Inicio.prueba', 'method'=>'POST'));
-if ($res = true) {
-    header("Location: {{route('perfil')}}");
-}
-
-?>

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="{{asset('css/estilo.css')}}" type="text/css">
 </head>
 <body>
-
-    <form action="Registrarse.php" class="form-box" method="POST">
-
+ 
+    <form action="{{route('registrarse')}}" class="form-box" method="POST">
+        @csrf
         <img src="img/logo.jpg" class="logo">
-        <input type="text" placeholder="Nombre" name="Nombre">
-        <input type="text" placeholder="Edad" name="Edad">
-        <input type="text" placeholder="Correo" name="Correo">
-        <input type="password" placeholder="Contraseña" name="Contrasena">
+        <input type="text" placeholder="Nombre" name="Nombre_usuario">
+        <input type="text" placeholder="Edad" name="Edad_usuario">
+        <input type="text" placeholder="Correo" name="Correo_usuario">
+        <input type="password" placeholder="Contraseña" name="Contraseña_usuario">
         <button type="submit"> Registrarse </button>
 
     </form>

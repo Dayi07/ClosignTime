@@ -11,10 +11,19 @@ class Usuario extends Model
 
     protected $table = "usuario";
 
-    protected $fillable = ['Id_usuario', 'Nombre_usuario', 'Correo_usuario', 'Edad_usuario', 'Contraseña_usuario', 'Foto_perfil'];
+    protected $fillable = ['Nombre_usuario', 'Correo_usuario', 'Edad_usuario', 'Contraseña_usuario', 'Foto_perfil'];
+    protected $hidden = ['Id_usuario'];
 
     public function obtenerUsuario(){
         return Usuario::all();
+    } 
+
+    public function obtenerUsuarioPorId($id){
+        return Usuario::find($id);
     }
 
-}
+    public function obtenerId(){
+        return $this->Id_usuario;;
+    }
+
+}   

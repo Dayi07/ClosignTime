@@ -14,10 +14,9 @@ class InicioController extends DatabaseController
         $this->usuario = $usuario;
     }
 
-
     public function index(){
-        $inicio = $this->usuario->obtenerUsuario();
-        return view('Inicio_sesion.lista', ['usuario' => $inicio]);
+        $usuarios = $this->usuario->obtenerUsuario();
+        return view('Inicio_sesion', ['usuarios' => $usuarios]);
     }
 
     public function Inicio(){
@@ -28,6 +27,13 @@ class InicioController extends DatabaseController
         return view('Registrarse');
     }
 
+    //funcion para el guardado de un usuario en la base de datos (se utiliza en el registro)
+    public function store(Request $request){
+        $usuario = new Usuario($request->all());
+        $usuario->save();
+        return redirect()->action([ModulosController::class, 'Perfil']);
+    }
+
     //Funcion para validar el inicio de sesion
     public function inicioUsuario($Correo, $Contrasena){
         $this->correo = $Correo;
@@ -35,10 +41,6 @@ class InicioController extends DatabaseController
         $res = mysqli_query($this->con, $sql);
         $filas=mysqli_num_rows($res);
         return $filas;
-    }
-
-    public function prueba(){
-        return true;
     }
 
 }

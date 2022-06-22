@@ -7,7 +7,7 @@
     <title>Perfil</title>
     <link rel="stylesheet" href="{{asset('css/perfil.css')}}" type="text/css">
 
-</head>
+</head> 
 <body>
 
 <header class="header">
@@ -34,8 +34,8 @@
 
     <img src="img/logo.jpg" class="foto">
 <br><br>
-    <h1>
-        MARILYN DAYANA LONDOÑO HOYOS
+    <h1> 
+        Lili
     </h1>
 
     <h3>

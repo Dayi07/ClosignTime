@@ -8,7 +8,7 @@ class DatabaseController {
     protected $con;
     protected $dbhost="localhost";
     protected $dbuser="root";
-    protected $dbpass="Sena2020*";
+    protected $dbpass="";
     protected $dbname="closingtime";
     protected $correo="";
 

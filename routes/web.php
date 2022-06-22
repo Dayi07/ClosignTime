@@ -16,18 +16,21 @@ use App\Http\Controllers\ModulosController;
 |
 */
 
+
 Route::controller(ModulosController::class)->group(function(){
-    Route::get('perfil', 'Perfil')->name('perfil');
-    Route::get('documentos', 'Documentos')->name('documento');
+    Route::get('/perfil/{id}', 'show')->name('perfil');
+    Route::get('/documentos', 'Documentos')->name('documento');
 });
 
 Route::controller(InicioController::class)->group(function(){
-    Route::get('inicio_sesion', 'Inicio')->name('inicio');
-    Route::get('registrarse', 'Registrarse')->name('registro');
+    Route::get('/inicio_sesion', 'index')->name('inicio');
 });
+Route::get('/registrarse', [InicioController::class, 'Registrarse']);
+Route::post('/registrarse', [InicioController::class, 'store'])->name('registrarse');
+
 
 Route::controller(DocumentoController::class)->group(function(){
-    Route::get('agregar', 'Nuevo')->name('agregar');
-    Route::get('modificar', 'ModificarView')->name('modificar');
+    Route::get('/agregar', 'Nuevo')->name('agregar');
+    Route::get('/modificar', 'ModificarView')->name('modificar');
 });
 
